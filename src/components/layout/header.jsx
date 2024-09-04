@@ -21,7 +21,7 @@ const Header = () => {
             icon: <SettingOutlined />,
             children: [
                 {
-                    label: 'Login',
+                    label: <Link to={"/login"}>Login</Link>,
                     key: 'login',
                 },
                 {
@@ -29,6 +29,11 @@ const Header = () => {
                     key: 'logout',
                 },
             ],
+        },
+        {
+            label: <Link to={"/register"}>Register</Link>,
+            key: 'register',
+            icon: <MailOutlined />,
         },
     ];
     const [current, setCurrent] = useState('mail');

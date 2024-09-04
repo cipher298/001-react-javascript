@@ -1,6 +1,6 @@
 import { Button, Form, Input, notification } from 'antd';
 import { createUserApi } from '../util/api';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
   const navigate = useNavigate()
@@ -24,6 +24,8 @@ const RegisterPage = () => {
 
   return (
     <div style={{ padding: "20px" }}>
+      <Link to={"/"}>Back Home</Link>
+
       <Form
         name="basic"
         labelCol={{
