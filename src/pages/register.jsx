@@ -23,18 +23,8 @@ const RegisterPage = () => {
   };
 
   return (
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <div style={{ padding: "20px" }}>
-      <Link to={"/"}>Back Home</Link>
-=======
     <div style={{ padding: '20px' }}>
       <Link to={'/'}>Back Home</Link>
->>>>>>> Stashed changes
-=======
-    <div style={{ padding: '20px' }}>
-      <Link to={'/'}>Back Home</Link>
->>>>>>> Stashed changes
 
       <Form
         name='basic'
