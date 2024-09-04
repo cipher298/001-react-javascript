@@ -1,24 +1,24 @@
-import Header from "./components/layout/header";
-import { Outlet } from "react-router-dom";
-import axios from "./util/axios.customize";
-import { useEffect } from "react"
+import Header from './components/layout/header';
+import { Outlet } from 'react-router-dom';
+import axios from './util/axios.customize';
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
     const fetchHelloWorld = async () => {
-      const res = await axios.get(`/v1/api`)
-      console.log(">>> check res: ", res);
-    }
+      const res = await axios.get(`/v1/api`);
+      console.log('>>> check res: ', res);
+    };
 
-    fetchHelloWorld()
-  }, [])
+    fetchHelloWorld();
+  }, []);
 
   return (
     <div>
       <Header />
       <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

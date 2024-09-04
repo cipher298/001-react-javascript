@@ -3,31 +3,36 @@ import { createUserApi } from '../util/api';
 import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const onFinish = async (values) => {
-    const { name, email, password } = values
-    const res = await createUserApi(name, email, password)
+    const { name, email, password } = values;
+    const res = await createUserApi(name, email, password);
     if (res) {
       notification.success({
         message: 'User created successfully!',
         description: 'success',
-      })
-      navigate("/login")
+      });
+      navigate('/login');
     } else {
       notification.error({
         message: 'User creation failed',
         description: 'fail',
-      })
+      });
     }
   };
 
   return (
+<<<<<<< Updated upstream
     <div style={{ padding: "20px" }}>
       <Link to={"/"}>Back Home</Link>
+=======
+    <div style={{ padding: '20px' }}>
+      <Link to={'/'}>Back Home</Link>
+>>>>>>> Stashed changes
 
       <Form
-        name="basic"
+        name='basic'
         labelCol={{
           span: 8,
         }}
@@ -41,13 +46,13 @@ const RegisterPage = () => {
           remember: true,
         }}
         onFinish={onFinish}
-        autoComplete="off"
+        autoComplete='off'
         layout='vertical'
       >
         {/* Name */}
         <Form.Item
-          label="Name"
-          name="name"
+          label='Name'
+          name='name'
           rules={[
             {
               required: true,
@@ -60,8 +65,8 @@ const RegisterPage = () => {
 
         {/* Email */}
         <Form.Item
-          label="Email"
-          name="email"
+          label='Email'
+          name='email'
           rules={[
             {
               required: true,
@@ -74,8 +79,8 @@ const RegisterPage = () => {
 
         {/* Password */}
         <Form.Item
-          label="Password"
-          name="password"
+          label='Password'
+          name='password'
           rules={[
             {
               required: true,
@@ -88,7 +93,7 @@ const RegisterPage = () => {
 
         {/* Button */}
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type='primary' htmlType='submit'>
             Submit
           </Button>
         </Form.Item>

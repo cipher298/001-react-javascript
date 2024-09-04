@@ -23,4 +23,14 @@ const loginApi = (email, password) => {
   return axios.post(URL_API, data);
 };
 
+<<<<<<< Updated upstream
 export { createUserApi, loginApi };
+=======
+const getUserApi = () => {
+  const URL_API = '/v1/api/user';
+
+  return axios.get(URL_API);
+};
+
+export { createUserApi, loginApi, getUserApi };
+>>>>>>> Stashed changes

@@ -11,20 +11,24 @@ import LoginPage from './pages/login.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       { index: true, element: <HomePage /> },
+<<<<<<< Updated upstream
       { path: "user", element: <UserPage /> },
       // { path: "login", element: <LoginPage /> },
+=======
+      { path: 'user', element: <UserPage /> },
+>>>>>>> Stashed changes
     ],
   },
   {
-    path: "register",
+    path: 'register',
     element: <RegisterPage />,
   },
   {
-    path: "login",
+    path: 'login',
     element: <LoginPage />,
   },
 ]);
