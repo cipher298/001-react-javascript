@@ -16,8 +16,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       { path: "user", element: <UserPage /> },
       // { path: "login", element: <LoginPage /> },
+=======
+      { path: 'user', element: <UserPage /> },
+>>>>>>> Stashed changes
 =======
       { path: 'user', element: <UserPage /> },
 >>>>>>> Stashed changes

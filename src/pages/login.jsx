@@ -2,6 +2,7 @@ import { Button, Form, Input, notification } from 'antd';
 import { loginApi } from '../util/api';
 import { Link, useNavigate } from 'react-router-dom';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 const LoginPage = () => {
     const navigate = useNavigate()
@@ -89,6 +90,10 @@ const LoginPage = () => {
 >>>>>>> Stashed changes
 
 const LoginPage = () => {
+=======
+
+const LoginPage = () => {
+>>>>>>> Stashed changes
   const navigate = useNavigate();
 
   const onFinish = async (values) => {
