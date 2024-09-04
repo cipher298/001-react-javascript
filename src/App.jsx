@@ -13,7 +13,7 @@ function App() {
       setAppLoading(true);
 
       const res = await axios.get(`/v1/api/account`);
-      if (res) {
+      if (res && !res.message) {
         setAuth({
           isAuthenticated: true,
           user: {
@@ -27,7 +27,7 @@ function App() {
     };
 
     fetchAccount();
-  }, []);
+  }, [setAppLoading, setAuth]);
 
   return (
     <div>

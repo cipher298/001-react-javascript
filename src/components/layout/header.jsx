@@ -1,5 +1,9 @@
 import { useContext, useState } from 'react';
-import { MailOutlined, SettingOutlined } from '@ant-design/icons';
+import {
+  UsergroupAddOutlined,
+  HomeOutlined,
+  SettingOutlined,
+} from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth.context';
@@ -14,7 +18,7 @@ const Header = () => {
     {
       label: <Link to={'/'}>Home</Link>,
       key: 'home',
-      icon: <MailOutlined />,
+      icon: <HomeOutlined />,
     },
 
     // User
@@ -23,15 +27,15 @@ const Header = () => {
           {
             label: <Link to={'/user'}>User</Link>,
             key: 'user',
-            icon: <MailOutlined />,
+            icon: <UsergroupAddOutlined />,
           },
         ]
       : []),
 
     // Login - Logout
     {
-      label: `Welcome ${auth?.user?.name}`,
-      key: 'welcome',
+      label: `Welcome ${auth?.user?.name ?? ''}`,
+      key: 'submenu',
       icon: <SettingOutlined />,
       children: [
         ...(auth.isAuthenticated
@@ -65,11 +69,6 @@ const Header = () => {
               },
             ]),
       ],
-    },
-    {
-      label: <Link to={'/register'}>Register</Link>,
-      key: 'register',
-      icon: <MailOutlined />,
     },
   ];
   const [current, setCurrent] = useState('mail');

@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+:where(.css-dev-only-do-not-override-f7vrd6).ant-menu-light,
+:where(.css-dev-only-do-not-override-f7vrd6).ant-menu-light>.ant-menu {
+    background: #7cc5e18c;
+}
+
+:where(.css-dev-only-do-not-override-f7vrd6).ant-table-wrapper .ant-table-pagination-right {
+    justify-content: center;
+}

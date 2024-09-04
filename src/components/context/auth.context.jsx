@@ -16,6 +16,7 @@ export const AuthWrapper = (props) => {
       name: '',
       email: '',
     },
+    appLoading: true,
   });
 
   const [appLoading, setAppLoading] = useState(true);
