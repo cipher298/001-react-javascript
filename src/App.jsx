@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Header from './components/layout/header';
 import { Outlet } from 'react-router-dom';
 import axios from './util/axios.customize';
@@ -27,7 +28,7 @@ function App() {
     };
 
     fetchAccount();
-  }, [setAppLoading, setAuth]);
+  }, []);
 
   return (
     <div>
